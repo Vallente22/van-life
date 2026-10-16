@@ -41,6 +41,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
+a.active-style {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
 nav > div {
   display: flex;
   gap: 20px;
