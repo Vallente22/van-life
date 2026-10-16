@@ -4,15 +4,11 @@ import About from './pages/About';
 import Vans from './pages/Vans/Vans';
 import VanDetail from './pages/Vans/VanDetail';
 import Host from './pages/Host/Host';
+import Dashboard from './pages/Host/Dashboard';
+import Income from './pages/Host/Income';
+import Reviews from './pages/Host/Reviews';
 import Layout from './components/Layout';
 import '../server'
-
-/**
- * Challenge:
- * 3. Set up routes for each of these pages in the Routes below. FOR NOW,
- *    don't worry about nesting anything, you can just put them on the same
- *    level as the "/vans", etc. routes below.
- */
 
 export default function App() {
   return (
@@ -22,6 +18,9 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/host" element={<Host />} />
+            <Route path="/host/dashboard" element={<Dashboard />} />
+            <Route path="/host/income" element={<Income />} />
+            <Route path="/host/reviews" element={<Reviews />} />
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />} />
             <Route path="/vans/:id" element={<VanDetail />} />
