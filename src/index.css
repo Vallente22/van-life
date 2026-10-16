@@ -37,9 +37,8 @@ a {
   text-decoration: none;
 }
 
-div a.active {
+nav a:hover {
   text-decoration: underline;
-  font-weight: bold;
 }
 
 nav > div {
