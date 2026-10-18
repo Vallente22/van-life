@@ -32,6 +32,8 @@ export default function Vans() {
     )
   })
 
+
+
   return (
     <section className="van-list-container">
       <h2>Explore our van options</h2>
