@@ -15,7 +15,6 @@ export default function Vans() {
       .then(data => setVans(data.vans)
     )
   }, [])
-  console.log(vans)
 
   const vansElements = vans.map((van) => {
     return (
