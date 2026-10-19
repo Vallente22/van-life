@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <nav className="flex justify-between items-center bg-[#FDF5E9] py-[10px]">
         <Link to="/">
-          <h2 className="ml-5">#VANLIFE</h2>
+          <h1 className="ml-5">#VANLIFE</h1>
         </Link>
 
         <div className="flex gap-5 mx-5">
