@@ -1,12 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function HostLayout() {
-  const activeStyle = {
-    fontWeight: "bold",
-    textDecoration: "underline",
-    color: "#161616"
-  }
-
   return (
     <>
       <nav className="flex gap-5 px-5 py-5">
