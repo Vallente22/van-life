@@ -1,20 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-/**
- * Challenge - part 2:
- * Make the host navbar indicate the currently-active route.
- * 
- * Use the following CSS rules:
- *      font-weight: bold;
- *      text-decoration: underline;
- *      color: #161616;
- * 
- * I'd recommend using an inline style this time.
- * 
- * NOTE: There will be a small bug that we'll fix 
- * after you do the challenge.
- */
-
 export default function HostLayout() {
   const activeStyle = {
     fontWeight: "bold",
@@ -24,12 +9,53 @@ export default function HostLayout() {
 
   return (
     <>
-      <nav>
-        <NavLink to="/host" end style={({isActive}) => isActive ? activeStyle : null}>Dashboard</NavLink>
-        <NavLink to="/host/income" style={({isActive}) => isActive ? activeStyle : null}>Income</NavLink>
-        <NavLink to="/host/vans" style={({isActive}) => isActive ? activeStyle : null}>Vans</NavLink>
-        <NavLink to="/host/reviews" style={({isActive}) => isActive ? activeStyle : null}>Reviews</NavLink>
+      <nav className="flex gap-5 px-5 py-5">
+        <NavLink
+          to="/host"
+          end
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold underline text-[#161616]"
+              : "text-black hover:underline"
+          }
+        >
+          Dashboard
+        </NavLink>
+
+        <NavLink
+          to="/host/income"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold underline text-[#161616]"
+              : "text-black hover:underline"
+          }
+        >
+          Income
+        </NavLink>
+
+        <NavLink
+          to="/host/vans"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold underline text-[#161616]"
+              : "text-black hover:underline"
+          }
+        >
+          Vans
+        </NavLink>
+
+        <NavLink
+          to="/host/reviews"
+          className={({ isActive }) =>
+            isActive
+              ? "font-bold underline text-[#161616]"
+              : "text-black hover:underline"
+          }
+        >
+          Reviews
+        </NavLink>
       </nav>
+
       <Outlet />
     </>
   )
