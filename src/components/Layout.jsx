@@ -4,12 +4,12 @@ import { Outlet } from 'react-router-dom';
 
 export default function Layout() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col font-[Verdana,Geneva,Tahoma,sans-serif] bg-[#FDF5E9]">
       <Header />
-      <main>
+      <main className="flex-1">
         <Outlet />  
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
