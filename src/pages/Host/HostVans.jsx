@@ -9,19 +9,28 @@ export default function HostVans() {
       .then(res => res.json())
       .then(data => setHostVan(data.vans))
   },[])
-
+  
   const hostVanElements = hostVan.map((van) => {
     return (
-      <Link key={van.id} to="vans/:id">
-        <h2 className="text-red-500 text-2xl mt-4">
-          {van.name}
-        </h2>
+      <Link key={van.id} to={`${van.id}`} className="bg-white rounded-md">
+        <div className="flex items-center gap-4 w-full max-w-[100px] m-5">
+          <img 
+            src={van.imageUrl} 
+            alt={van.name}
+            className="w-full h-auto rounded" 
+          />
+          <div>
+            <p className="font-bold whitespace-nowrap">{van.name}</p>
+            <p>${van.price}/day</p>
+          </div>
+        </div>
       </Link>
     )
   })
   
   return (
-    <div>
+    <div className="flex flex-col gap-5 px-5">
+      <h2>Your listed vans</h2>
       {hostVanElements}
     </div>
   )
