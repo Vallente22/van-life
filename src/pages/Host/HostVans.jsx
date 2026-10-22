@@ -19,8 +19,8 @@ export default function HostVans() {
             alt={van.name}
             className="w-full h-auto rounded" 
           />
-          <div>
-            <p className="font-bold whitespace-nowrap">{van.name}</p>
+          <div className="whitespace-nowrap">
+            <p className="font-bold ">{van.name}</p>
             <p>${van.price}/day</p>
           </div>
         </div>
