@@ -49,7 +49,7 @@ export default function Vans() {
 
   return (
     <section className="bg-[#FDF5E9] pb-[30px]">
-      <h2 className="mt-0 ml-5">Explore our van options</h2>
+      <h2 className="mt-0 ml-5 my-5">Explore our van options</h2>
 
       <div className="grid grid-cols-2 gap-5 px-5">
         {vansElements}
