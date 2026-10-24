@@ -1,5 +1,7 @@
 export default function HostVanInfo() {
   return (
-    <h1>details here</h1>
+    <div className="ml-5">
+      <p>detail here</p>
+    </div>
   )
 }

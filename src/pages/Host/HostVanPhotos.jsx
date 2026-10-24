@@ -1,5 +1,7 @@
 export default function HostVanPhotos() {
   return (
-    <h1>photos here</h1>
+    <div className="ml-5">
+      <p>photos here</p>
+    </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, Outlet, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 
 
@@ -17,16 +17,18 @@ export default function HostVanDetail() {
 
   return (
     <>
-      <Link to="/host/vans">
-        <div className="flex items-center gap-1 ml-5">
-          <FaArrowLeft className="text-gray-500" />
-          <p>Back to all vans</p>
-        </div>
+      <Link
+        to=".."
+        relative="path" 
+        className="flex items-center gap-1 ml-5"
+      >
+        <FaArrowLeft className="text-gray-500" />
+        <p>Back to all vans</p>
       </Link>
       
       {currentVan && 
         <section className="flex flex-col bg-white m-5 rounded-md">
-          <div className="flex items-center gap-4 w-full max-w-[100px] m-5">
+          <div className="flex items-center gap-4 w-full max-w-[150px] m-5">
             <img 
                 src={currentVan.imageUrl} 
                 alt={currentVan.name} 
@@ -53,16 +55,18 @@ export default function HostVanDetail() {
           </div>
 
           <nav className="flex gap-5 px-5 pb-5">
-            <NavLink>
+            <NavLink to=".">
               Details
             </NavLink>
-            <NavLink>
+            <NavLink to="pricing">
               Pricing
             </NavLink>
-            <NavLink>
+            <NavLink to="photos">
               Photos
             </NavLink>
-          </nav>
+          </nav>                
+          
+          <Outlet />
         </section>
       }
     </>

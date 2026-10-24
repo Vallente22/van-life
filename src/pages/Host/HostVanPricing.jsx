@@ -1,5 +1,7 @@
 export default function HostVanPricing() {
   return (
-    <h1>pricing here</h1>
+    <div className="ml-5">
+      <p>pricing here</p>
+    </div>
   )
 }
