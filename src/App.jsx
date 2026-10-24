@@ -43,6 +43,9 @@ export default function App() {
             <Route path="income" element={<Income />} />
             <Route path="vans" element={<HostVans />} />
             <Route path="vans/:id" element={<HostVanDetail />} />
+            <Route path="vans/:id/details" element={<HostVanDetail />} />
+            <Route path="vans/:id/pricing" element={<HostVanDetail />} />
+            <Route path="vans/:id/photos" element={<HostVanDetail />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
           
