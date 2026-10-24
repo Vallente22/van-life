@@ -55,13 +55,32 @@ export default function HostVanDetail() {
           </div>
 
           <nav className="flex gap-5 px-5 pb-5">
-            <NavLink to=".">
+            <NavLink 
+              to="."
+              end
+              className={({isActive}) => isActive 
+                ? "font-bold underline"
+                : "hover:underline"
+              }
+            >
               Details
             </NavLink>
-            <NavLink to="pricing">
+            <NavLink 
+              to="pricing"
+              className={({isActive}) => isActive 
+              ? "font-bold underline"
+              : "hover:underline"
+              }
+            >
               Pricing
             </NavLink>
-            <NavLink to="photos">
+            <NavLink 
+              to="photos"
+              className={({isActive}) => isActive 
+              ? "font-bold underline"
+              : "hover:underline"
+              }
+            >
               Photos
             </NavLink>
           </nav>                

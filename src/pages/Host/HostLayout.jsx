@@ -9,8 +9,8 @@ export default function HostLayout() {
           end
           className={({ isActive }) =>
             isActive
-              ? "font-bold underline text-[#161616]"
-              : "text-black hover:underline"
+              ? "font-bold underline"
+              : "hover:underline"
           }
         >
           Dashboard
@@ -20,8 +20,8 @@ export default function HostLayout() {
           to="/host/income"
           className={({ isActive }) =>
             isActive
-              ? "font-bold underline text-[#161616]"
-              : "text-black hover:underline"
+              ? "font-bold underline"
+              : "hover:underline"
           }
         >
           Income
@@ -31,8 +31,8 @@ export default function HostLayout() {
           to="/host/vans"
           className={({ isActive }) =>
             isActive
-              ? "font-bold underline text-[#161616]"
-              : "text-black hover:underline"
+              ? "font-bold underline"
+              : "hover:underline"
           }
         >
           Vans
@@ -42,8 +42,8 @@ export default function HostLayout() {
           to="/host/reviews"
           className={({ isActive }) =>
             isActive
-              ? "font-bold underline text-[#161616]"
-              : "text-black hover:underline"
+              ? "font-bold underline"
+              : "hover:underline"
           }
         >
           Reviews
