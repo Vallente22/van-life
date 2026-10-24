@@ -6,12 +6,12 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function HostVanDetail() {
   const params = useParams()
 
-  const [hostVanDetail, setHostVanDetail] = useState(null)
+  const [currentVan, setCurrentVan] = useState(null)
 
   useEffect(() => {
     fetch(`/api/host/vans/${params.id}`)
       .then(res => res.json())
-      .then(data => setHostVanDetail(data.vans[0]))
+      .then(data => setCurrentVan(data.vans[0]))
         
   }, [params.id])
 
@@ -24,33 +24,34 @@ export default function HostVanDetail() {
         </div>
       </Link>
       
-      {hostVanDetail && 
+      {currentVan && 
         <section className="flex flex-col bg-white m-5 rounded-md">
           <div className="flex items-center gap-4 w-full max-w-[100px] m-5">
             <img 
-                src={hostVanDetail.imageUrl} 
-                alt={hostVanDetail.name} 
+                src={currentVan.imageUrl} 
+                alt={currentVan.name} 
                 className="w-full h-auto rounded"
             />
             <div className="whitespace-nowrap">
               <i
                 className={`inline-block py-1 px-3 text-white not-italic rounded ${
-                  hostVanDetail.type === "simple"
+                  currentVan.type === "simple"
                     ? "bg-[#D66A48]"
-                    : hostVanDetail.type === "rugged"
+                    : currentVan.type === "rugged"
                     ? "bg-[#0E4642]"
                     : "bg-[#121313]"
                 }`}
               >
-                {hostVanDetail.type}
+                {currentVan.type}
               </i>
-              <h2>{hostVanDetail.name}</h2>
+              <h2>{currentVan.name}</h2>
               <p>
-                <span className="font-bold">${hostVanDetail.price}</span>
+                <span className="font-bold">${currentVan.price}</span>
                 /day
               </p>
             </div>
           </div>
+
           <nav className="flex gap-5 px-5 pb-5">
             <NavLink>
               Details
