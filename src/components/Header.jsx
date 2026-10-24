@@ -13,7 +13,7 @@ export default function Header() {
           <NavLink
             to="/host"
             className={({ isActive }) =>
-              isActive ? "font-bold underline text-[#161616]" : "text-black hover:underline"
+              isActive ? "font-bold underline" : "hover:underline"
             }
           >
             Host
@@ -22,7 +22,7 @@ export default function Header() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "font-bold underline text-[#161616]" : "text-black hover:underline"
+              isActive ? "font-bold underline" : "hover:underline"
             }
           >
             About
@@ -31,7 +31,7 @@ export default function Header() {
           <NavLink
             to="/vans"
             className={({ isActive }) =>
-              isActive ? "font-bold underline text-[#161616]" : "text-black hover:underline"
+              isActive ? "font-bold underline" : "hover:underline"
             }
           >
             Vans
