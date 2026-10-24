@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 
 
@@ -51,6 +51,17 @@ export default function HostVanDetail() {
               </p>
             </div>
           </div>
+          <nav className="flex gap-5 px-5 pb-5">
+            <NavLink>
+              Details
+            </NavLink>
+            <NavLink>
+              Pricing
+            </NavLink>
+            <NavLink>
+              Photos
+            </NavLink>
+          </nav>
         </section>
       }
     </>
