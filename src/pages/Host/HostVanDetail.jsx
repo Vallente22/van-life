@@ -58,34 +58,25 @@ export default function HostVanDetail() {
             <NavLink 
               to="."
               end
-              className={({isActive}) => isActive 
-                ? "font-bold underline"
-                : "hover:underline"
-              }
+              className={({isActive}) => isActive ? "font-bold underline": "hover:underline"}
             >
               Details
             </NavLink>
             <NavLink 
               to="pricing"
-              className={({isActive}) => isActive 
-              ? "font-bold underline"
-              : "hover:underline"
-              }
+              className={({isActive}) => isActive ? "font-bold underline" : "hover:underline"}
             >
               Pricing
             </NavLink>
             <NavLink 
               to="photos"
-              className={({isActive}) => isActive 
-              ? "font-bold underline"
-              : "hover:underline"
-              }
+              className={({isActive}) => isActive ? "font-bold underline" : "hover:underline"}
             >
               Photos
             </NavLink>
           </nav>                
           
-          <Outlet />
+          <Outlet context={currentVan} />
         </section>
       }
     </>
